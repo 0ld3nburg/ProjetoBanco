@@ -1,6 +1,6 @@
 //gerente herda classe funcionario
 //classe filho
-public class Gerente extends Funcionario {
+public class Gerente extends Funcionario implements Autenticavel {
 
 	//private int tipo = 0; // 0 funcionario - 1 gerente - 2 diretor
 	private int senha;
@@ -36,7 +36,7 @@ public class Gerente extends Funcionario {
 //	}
 	
 	public double getBonificacao() {
-		return super.salario + super.getBonificacao(); //não utilizado .this pois o atributo salario está em outra classe, na classe mãe (Funcionario)
+		return this.getSalario(); //não utilizado .this pois o atributo salario está em outra classe, na classe mãe (Funcionario)
 	}
 	
 //	public Gerente(int cpf, String nome) {

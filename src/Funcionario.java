@@ -1,5 +1,6 @@
 //super class
-public class Funcionario {
+//classes abstratas não podem ser instanciadas pois são abstratas
+public abstract class Funcionario {
 
 	private String nome;
 	private int cpf;
@@ -10,9 +11,8 @@ public class Funcionario {
 	
 	
 	
-	public double getBonificacao() {
-		return this.salario * 0.1;
-	}
+	public abstract double getBonificacao(); //método abstrato, deve ser desenvolvido nas classes filhas
+	
 	
 	public String getNome() {
 		return nome;

@@ -54,7 +54,7 @@ public class CriarConta {
 		System.out.println(gerente1.getCpf());
 		System.out.println(gerente1.getNome());
 
-		Funcionario funcionario1 = new Funcionario();
+		Funcionario funcionario1 = new Editor();
 
 		funcionario1.setSalario(1000);
 		System.out.println("A bonificação eh " + funcionario1.getBonificacao());
@@ -69,5 +69,29 @@ public class CriarConta {
 		System.out.println(gerente1.getSalario());
 		System.out.println("A bonificação do gerente eh " + gerente1.getBonificacao());
 
+		
+		Funcionario editor1 = new Editor();//POSSO CRIAR EDITOR1 DO TIPO FUNCIONARIO (MAIS GENÉRICO) EM VEZ DE CRIAR DO TIPO EDITOR, POIS UM EDITOR É UM FUNCIONÁRIO
+		editor1.setSalario(1000);
+		
+		ControleBonificacao controle = new ControleBonificacao();
+		controle.registra(editor1);
+		
+		System.out.println(controle.getSoma());
+		
+		Conta poupanca = new Poupanca(0214, 35123);
+		
+		poupanca.deposita(1000);
+		poupanca.saca(200);
+		System.out.println(poupanca.getSaldo());
+		
+		Funcionario editor2 = new Editor();
+		
+		System.out.println(editor2.getBonificacao());
+		
+		Gerente referencia = new Gerente();	
+		
+		referencia.setSenha(2222);
+		
+		
 	}
 }
